@@ -1,0 +1,16 @@
+<div class="messages-container">
+  {% for message in messages %}
+  <div class="card mb-2 bg-light">
+    <div class="card-body py-2">
+      <small class="text-muted">
+        <i class="far fa-calendar me-1"></i>
+        {{message.date}}
+      </small>
+      <p class="mb-0">
+        <i class="far fa-comment me-2"></i>
+        {{message.text}}
+      </p>
+    </div>
+  </div>
+  {% endfor %}
+</div>
