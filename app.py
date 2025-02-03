@@ -51,7 +51,7 @@ def get_messages():
         updates = asyncio.run(bot.get_updates())
         messages = []
         for update in updates:
-            if update.message and str(update.message.chat.id) == chat_id:
+            if update.message and str(update.message.chat.id) == chat_id and update.message.text != None :
                 thai_tz = pytz.timezone("Asia/Bangkok")
                 messages.append(
                     {
